@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+    }
+  
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .card-text {
+    display: block;
+    margin: 0;
+    padding: 5px 0;
+  }
+
+  @media (max-width: 767px) {
+      .navbar-expand-lg .navbar-nav .nav-link {
+        color: #343a40; 
+      }
+      .navbar-toggler-icon {
+        background-color: #fff; 
+      }
+    }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="footer, contact, form, icons">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/home">Fashion boutique</a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/order">New order</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/orders">Orders</a>
+            </li>
+            {% ifequal admin "true" %}
+            <li class="nav-item">
+                <a class="nav-link" href="/clothingitems">Items</a>
+            </li>
+            {% endifequal %}
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+  <div class="container">
+    <div class="image-gallery">
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://static.zara.net/photos///2023/V/0/1/p/1165/254/046/3/w/824/1165254046_1_1_1.jpg?ts=1682503908995" alt="Skirt">
+        <div class="card-overlay">
+          <span class="card-text">Pleated Skirt</span>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://static.zara.net/photos///2023/I/0/1/p/7969/223/098/2/w/1920/7969223098_1_1_1.jpg?ts=1685629436265" alt="Floral dress">
+        <div class="card-overlay">
+          <span class="card-text">Floral dress</span>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://static.zara.net/photos///2023/V/0/1/p/9929/039/800/2/w/404/9929039800_2_1_1.jpg?ts=1681815883884" alt="Trusers">
+        <div class="card-overlay">
+          <span class="card-text">Black trousers</span>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://static.zara.net/photos///2023/V/0/1/p/5644/163/250/2/w/560/5644163250_1_1_1.jpg?ts=1681220678354" alt="Bermuda shorts">
+        <div class="card-overlay">
+          <span class="card-text">Printed T-shirt</span>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://static.zara.net/photos///2023/V/0/1/p/7484/060/250/2/w/1920/7484060250_1_1_1.jpg?ts=1678783982458" alt="Ruffled blouse">
+        <div class="card-overlay">
+          <span class="card-text">Ruffled blouse</span>
+        </div>
+      </div>
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://static.zara.net/photos///2023/I/0/1/p/8372/223/807/2/w/824/8372223807_1_1_1.jpg?ts=1683816372652" alt="Linen bermuda shorts">
+        <div class="card-overlay">
+          <span class="card-text">Linen bermuda shorts</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
